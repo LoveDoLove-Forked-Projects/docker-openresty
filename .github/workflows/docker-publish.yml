@@ -166,38 +166,6 @@ jobs:
               RESTY_APT_REPO=https://openresty.org/package/arm64/debian
               RESTY_APT_ARCH=arm64
 
-          # --- Debian Bullseye ---
-          - flavor: bullseye
-            arch: amd64
-            dockerfile: bullseye/Dockerfile
-            platforms: linux/amd64
-          - flavor: bullseye
-            arch: arm64
-            dockerfile: bullseye/Dockerfile
-            platforms: linux/arm64
-            build-args: RESTY_APT_REPO=https://openresty.org/package/arm64/debian
-          # --- Debian Bullseye Debug ---
-          - flavor: bullseye-debug
-            arch: amd64
-            dockerfile: bullseye/Dockerfile.debug
-            platforms: linux/amd64
-          - flavor: bullseye-debug
-            arch: arm64
-            dockerfile: bullseye/Dockerfile.debug
-            platforms: linux/arm64
-            build-args: RESTY_APT_REPO=https://openresty.org/package/arm64/debian
-
-          # --- Debian Bullseye Valgrind ---
-          - flavor: bullseye-valgrind
-            arch: amd64
-            dockerfile: bullseye/Dockerfile.valgrind
-            platforms: linux/amd64
-          - flavor: bullseye-valgrind
-            arch: arm64
-            dockerfile: bullseye/Dockerfile.valgrind
-            platforms: linux/arm64
-            build-args: RESTY_APT_REPO=https://openresty.org/package/arm64/debian
-
           # --- Ubuntu Jammy ---
           - flavor: jammy
             arch: amd64
@@ -327,9 +295,6 @@ jobs:
           - bookworm-buildpack
           - bookworm-debug
           - bookworm-valgrind
-          - bullseye
-          - bullseye-debug
-          - bullseye-valgrind
           - jammy
           - noble
           - resolute
@@ -376,17 +341,6 @@ jobs:
             dockerfile: bookworm/Dockerfile.fat
             platforms: linux/arm64
           
-          - flavor: bullseye-fat
-            base_flavor: bullseye
-            arch: amd64
-            dockerfile: bullseye/Dockerfile.fat
-            platforms: linux/amd64
-          - flavor: bullseye-fat
-            base_flavor: bullseye
-            arch: arm64
-            dockerfile: bullseye/Dockerfile.fat
-            platforms: linux/arm64
-
           - flavor: alpine-fat
             base_flavor: alpine
             arch: amd64
@@ -605,7 +559,6 @@ jobs:
       matrix:
         flavor:
           - bookworm-fat
-          - bullseye-fat
           - alpine-fat
     steps:
       - name: Checkout

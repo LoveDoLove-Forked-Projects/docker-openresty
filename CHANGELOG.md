@@ -5,6 +5,7 @@
 
  * Upgrade OpenSSL to 3.5.8
  * Add `bookworm-debug` and `bookworm-valgrind` flavors
+ * Move `bullseye` flavors to archive as Debian 11 LTS ended on 2026-08-31 and `bullseye-security` is no longer published
 
 ## 1.31.1.1-2 (2026-07-08)
 
