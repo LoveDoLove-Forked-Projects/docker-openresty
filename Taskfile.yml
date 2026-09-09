@@ -65,9 +65,13 @@ tasks:
       - docker build -f resolute/Dockerfile .
 
   build-debug-arm64:
+      - docker build -t bookworm-debug-aarch64    -f bookworm/Dockerfile.debug    --build-arg RESTY_APT_REPO="https://openresty.org/package/arm64/debian" --build-arg RESTY_APT_ARCH="arm64" .
+      - docker build -t bookworm-valgrind-aarch64 -f bookworm/Dockerfile.valgrind --build-arg RESTY_APT_REPO="https://openresty.org/package/arm64/debian" --build-arg RESTY_APT_ARCH="arm64" .
       - docker build -t bullseye-debug-aarch64    -f bullseye/Dockerfile.debug    --build-arg RESTY_APT_REPO="https://openresty.org/package/arm64/debian" .
       - docker build -t bullseye-valgrind-aarch64 -f bullseye/Dockerfile.valgrind --build-arg RESTY_APT_REPO="https://openresty.org/package/arm64/debian" .
 
   build-debug-amd64:
+      - docker build -t bookworm-debug-amd64    -f bookworm/Dockerfile.debug    --build-arg RESTY_APT_ARCH=amd64 .
+      - docker build -t bookworm-valgrind-amd64 -f bookworm/Dockerfile.valgrind --build-arg RESTY_APT_ARCH=amd64 .
       - docker build -t bullseye-debug-amd64    -f bullseye/Dockerfile.debug    .
       - docker build -t bullseye-valgrind-amd64 -f bullseye/Dockerfile.valgrind .

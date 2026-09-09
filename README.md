@@ -63,6 +63,8 @@ These are examples of untagged image names, for reference:
 There are also specific tags for [Debug](https://openresty.org/en/deb-packages.html#openresty-debug) and [Valgrind](https://openresty.org/en/deb-packages.html#openresty-valgrind) OpenResty variants:
 | Image | Description |
 | --- | --- |
+| `openresty/openresty:bookworm-debug` | Bookworm flavor with `openresty-debug` |
+| `openresty/openresty:bookworm-valgrind` | Bookworm flavor with `openresty-valgrind` |
 | `openresty/openresty:bullseye-debug` | Bullseye flavor with `openresty-debug` |
 | `openresty/openresty:bullseye-valgrind` | Bullseye flavor with `openresty-valgrind` |
 | `openresty/openresty:bullseye-fat-debug` | Bullseye FAT flavor with `openresty-debug` |
@@ -103,7 +105,9 @@ The following "flavors" are available and built from [upstream OpenResty package
 
 - [`alpine-apk`, (*alpine-apk/Dockerfile*)](https://github.com/openresty/docker-openresty/blob/master/alpine-apk/Dockerfile)
 - [`bookworm-buildpack`, (*bookworm/Dockerfile.buildpack*)](https://github.com/openresty/docker-openresty/blob/master/bookworm/Dockerfile.buildpack)
+- [`bookworm-debug`, (*bookworm/Dockerfile.debug*)](https://github.com/openresty/docker-openresty/blob/master/bookworm/Dockerfile.debug)
 - [`bookworm-fat`, (*bookworm/Dockerfile.fat*)](https://github.com/openresty/docker-openresty/blob/master/bookworm/Dockerfile.fat)
+- [`bookworm-valgrind`, (*bookworm/Dockerfile.valgrind*)](https://github.com/openresty/docker-openresty/blob/master/bookworm/Dockerfile.valgrind)
 - [`bookworm`, (*bookworm/Dockerfile*)](https://github.com/openresty/docker-openresty/blob/master/bookworm/Dockerfile)
 - [`bullseye-fat`, (*bullseye/Dockerfile.fat*)](https://github.com/openresty/docker-openresty/blob/master/bullseye/Dockerfile.fat)
 - [`bullseye`, (*bullseye/Dockerfile*)](https://github.com/openresty/docker-openresty/blob/master/bullseye/Dockerfile)

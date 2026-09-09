@@ -4,6 +4,7 @@
 ## 1.31.1.1-3 (2026-09-04)
 
  * Upgrade OpenSSL to 3.5.8
+ * Add `bookworm-debug` and `bookworm-valgrind` flavors
 
 ## 1.31.1.1-2 (2026-07-08)
 

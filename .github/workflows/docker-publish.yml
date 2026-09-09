@@ -140,6 +140,32 @@ jobs:
               RESTY_APT_REPO=https://openresty.org/package/arm64/debian
               RESTY_APT_ARCH=arm64
 
+          # --- Debian Bookworm Debug ---
+          - flavor: bookworm-debug
+            arch: amd64
+            dockerfile: bookworm/Dockerfile.debug
+            platforms: linux/amd64
+          - flavor: bookworm-debug
+            arch: arm64
+            dockerfile: bookworm/Dockerfile.debug
+            platforms: linux/arm64
+            build-args: |
+              RESTY_APT_REPO=https://openresty.org/package/arm64/debian
+              RESTY_APT_ARCH=arm64
+
+          # --- Debian Bookworm Valgrind ---
+          - flavor: bookworm-valgrind
+            arch: amd64
+            dockerfile: bookworm/Dockerfile.valgrind
+            platforms: linux/amd64
+          - flavor: bookworm-valgrind
+            arch: arm64
+            dockerfile: bookworm/Dockerfile.valgrind
+            platforms: linux/arm64
+            build-args: |
+              RESTY_APT_REPO=https://openresty.org/package/arm64/debian
+              RESTY_APT_ARCH=arm64
+
           # --- Debian Bullseye ---
           - flavor: bullseye
             arch: amd64
@@ -299,6 +325,8 @@ jobs:
           - fedora
           - bookworm
           - bookworm-buildpack
+          - bookworm-debug
+          - bookworm-valgrind
           - bullseye
           - bullseye-debug
           - bullseye-valgrind
